@@ -1,4 +1,4 @@
-package com.example.testingmvcarchitecture.UI;
+package com.example.testingmvcarchitecture.screens;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,7 +16,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class NewsListActivity extends AppCompatActivity implements NewsListViewMvcImpl.Listener {
-
 
     private NewsListViewMvc mViewMvc;
 
@@ -54,10 +53,5 @@ public class NewsListActivity extends AppCompatActivity implements NewsListViewM
     @Override
     public void onNewsClicked(NewsEntity newsEntity) {
         Toast.makeText(this, newsEntity.getAuthor(), Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
     }
 }

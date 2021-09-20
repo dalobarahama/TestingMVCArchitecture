@@ -1,4 +1,4 @@
-package com.example.testingmvcarchitecture.UI;
+package com.example.testingmvcarchitecture.screens;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
