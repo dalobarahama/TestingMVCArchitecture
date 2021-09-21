@@ -1,4 +1,4 @@
-package com.example.testingmvcarchitecture.screens;
+package com.example.testingmvcarchitecture.screens.newslist;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.testingmvcarchitecture.R;
-import com.example.testingmvcarchitecture.common.BaseObservableViewMvc;
+import com.example.testingmvcarchitecture.screens.common.BaseObservableViewMvc;
 import com.example.testingmvcarchitecture.network.entities.NewsEntity;
 
 import java.util.List;

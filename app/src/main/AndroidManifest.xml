@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TestingMVCArchitecture">
         <activity
-            android:name=".screens.NewsListActivity"
+            android:name=".screens.newslist.NewsListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

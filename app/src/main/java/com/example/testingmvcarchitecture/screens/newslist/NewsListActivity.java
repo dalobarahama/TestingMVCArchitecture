@@ -1,21 +1,21 @@
-package com.example.testingmvcarchitecture.screens;
+package com.example.testingmvcarchitecture.screens.newslist;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.testingmvcarchitecture.network.ApiService;
 import com.example.testingmvcarchitecture.network.NewsResponse;
-import com.example.testingmvcarchitecture.network.RetrofitClientInstance;
 import com.example.testingmvcarchitecture.network.entities.NewsEntity;
+import com.example.testingmvcarchitecture.screens.common.BaseActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class NewsListActivity extends AppCompatActivity implements NewsListViewMvcImpl.Listener {
+public class NewsListActivity extends BaseActivity implements NewsListViewMvcImpl.Listener {
+
+    private ApiService apiService;
 
     private NewsListViewMvc mViewMvc;
 
@@ -26,18 +26,22 @@ public class NewsListActivity extends AppCompatActivity implements NewsListViewM
         mViewMvc = new NewsListViewMvcImpl(LayoutInflater.from(this), null);
         mViewMvc.registerListener(this);
 
-        callRetrofit();
+        apiService = getCompositionRoot().getNewsApiService();
 
         setContentView(mViewMvc.getRootView());
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        callRetrofit();
+    }
+
     private void callRetrofit() {
-        ApiService apiService = RetrofitClientInstance.getRetrofitInstance().create(ApiService.class);
-        Call<NewsResponse> call = apiService.getIndonesiaNewsList();
-        call.enqueue(new Callback<NewsResponse>() {
+        apiService.getIndonesiaNewsList().enqueue(new Callback<NewsResponse>() {
             @Override
             public void onResponse(Call<NewsResponse> call, Response<NewsResponse> response) {
-                if (response.body() != null) {
+                if (response.isSuccessful()) {
                     mViewMvc.bindNews(response.body().getNewsEntities());
                 }
             }

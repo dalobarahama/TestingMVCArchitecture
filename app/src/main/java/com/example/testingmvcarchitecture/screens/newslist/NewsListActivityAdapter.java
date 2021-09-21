@@ -1,4 +1,4 @@
-package com.example.testingmvcarchitecture.screens;
+package com.example.testingmvcarchitecture.screens.newslist;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
