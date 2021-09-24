@@ -1,12 +1,12 @@
 package com.example.testingmvcarchitecture.screens.newslist;
 
-import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.testingmvcarchitecture.network.entities.NewsEntity;
+import com.example.testingmvcarchitecture.screens.common.ViewMvcFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,14 +29,13 @@ public class NewsListActivityAdapter extends RecyclerView.Adapter<NewsListActivi
 
     }
 
-    private final LayoutInflater inflater;
-
     private final Listener listener;
+    private ViewMvcFactory viewMvcFactory;
     private List<NewsEntity> newsList = new ArrayList<>();
 
-    public NewsListActivityAdapter(LayoutInflater inflater, Listener listener) {
-        this.inflater = inflater;
+    public NewsListActivityAdapter(Listener listener, ViewMvcFactory viewMvcFactory) {
         this.listener = listener;
+        this.viewMvcFactory = viewMvcFactory;
     }
 
     public void bindNews(List<NewsEntity> newsEntities) {
@@ -47,7 +46,7 @@ public class NewsListActivityAdapter extends RecyclerView.Adapter<NewsListActivi
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        NewsListItemViewMvc viewMvc = new NewsListItemViewMvcImpl(inflater, parent);
+        NewsListItemViewMvc viewMvc = viewMvcFactory.getNewsListItemViewMvc(parent);
         viewMvc.registerListener(this);
         return new ViewHolder(viewMvc);
     }

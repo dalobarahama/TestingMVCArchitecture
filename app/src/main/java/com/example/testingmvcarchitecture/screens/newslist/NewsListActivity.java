@@ -1,7 +1,6 @@
 package com.example.testingmvcarchitecture.screens.newslist;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.widget.Toast;
 
 import com.example.testingmvcarchitecture.network.ApiService;
@@ -23,7 +22,7 @@ public class NewsListActivity extends BaseActivity implements NewsListViewMvcImp
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mViewMvc = new NewsListViewMvcImpl(LayoutInflater.from(this), null);
+        mViewMvc = getCompositionRoot().getViewMvcFactory().getNewsListViewMvc(null);
         mViewMvc.registerListener(this);
 
         apiService = getCompositionRoot().getNewsApiService();

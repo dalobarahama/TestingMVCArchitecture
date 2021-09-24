@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.view.LayoutInflater;
 
 import com.example.testingmvcarchitecture.network.ApiService;
+import com.example.testingmvcarchitecture.screens.common.ViewMvcFactory;
 
 public class ControllerCompositionRoot {
 
@@ -21,5 +22,9 @@ public class ControllerCompositionRoot {
 
     private LayoutInflater getLayoutInflater() {
         return LayoutInflater.from(activity);
+    }
+
+    public ViewMvcFactory getViewMvcFactory() {
+        return new ViewMvcFactory(getLayoutInflater());
     }
 }

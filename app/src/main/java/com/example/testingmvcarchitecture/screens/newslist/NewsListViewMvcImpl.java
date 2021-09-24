@@ -7,8 +7,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.testingmvcarchitecture.R;
-import com.example.testingmvcarchitecture.screens.common.BaseObservableViewMvc;
 import com.example.testingmvcarchitecture.network.entities.NewsEntity;
+import com.example.testingmvcarchitecture.screens.common.BaseObservableViewMvc;
+import com.example.testingmvcarchitecture.screens.common.ViewMvcFactory;
 
 import java.util.List;
 
@@ -17,12 +18,12 @@ public class NewsListViewMvcImpl extends BaseObservableViewMvc<NewsListViewMvc.L
     private RecyclerView recyclerView;
     private NewsListActivityAdapter adapter;
 
-    public NewsListViewMvcImpl(LayoutInflater inflater, ViewGroup parent) {
+    public NewsListViewMvcImpl(LayoutInflater inflater, ViewGroup parent, ViewMvcFactory viewMvcFactory) {
         setRootView(inflater.inflate(R.layout.activity_main, parent, false));
 
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapter = new NewsListActivityAdapter(inflater, this);
+        adapter = new NewsListActivityAdapter(this, viewMvcFactory);
         recyclerView.setAdapter(adapter);
 
     }
