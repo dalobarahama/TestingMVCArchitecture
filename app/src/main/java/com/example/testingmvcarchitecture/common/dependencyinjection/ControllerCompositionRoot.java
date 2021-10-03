@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.view.LayoutInflater;
 
 import com.example.testingmvcarchitecture.network.ApiService;
+import com.example.testingmvcarchitecture.network.FetchNewsDetailsUseCase;
 import com.example.testingmvcarchitecture.screens.common.ViewMvcFactory;
 
 public class ControllerCompositionRoot {
@@ -26,5 +27,9 @@ public class ControllerCompositionRoot {
 
     public ViewMvcFactory getViewMvcFactory() {
         return new ViewMvcFactory(getLayoutInflater());
+    }
+
+    public FetchNewsDetailsUseCase getFetchNewsDetailsUserCase() {
+        return new FetchNewsDetailsUseCase(getNewsApiService());
     }
 }

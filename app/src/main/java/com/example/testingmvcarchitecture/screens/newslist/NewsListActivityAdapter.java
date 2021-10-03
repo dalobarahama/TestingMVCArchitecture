@@ -15,7 +15,7 @@ public class NewsListActivityAdapter extends RecyclerView.Adapter<NewsListActivi
 
 
     public interface Listener {
-        void onNewsClicked(NewsEntity newsEntity);
+        void onNewsClicked(String position);
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -53,7 +53,7 @@ public class NewsListActivityAdapter extends RecyclerView.Adapter<NewsListActivi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.newsListItemViewMvc.bindNews(newsList.get(position));
+        holder.newsListItemViewMvc.bindNews(newsList.get(position), String.valueOf(position));
     }
 
     @Override
@@ -62,8 +62,8 @@ public class NewsListActivityAdapter extends RecyclerView.Adapter<NewsListActivi
     }
 
     @Override
-    public void onNewsClicked(NewsEntity newsEntity) {
-        listener.onNewsClicked(newsEntity);
+    public void onNewsClicked(String position) {
+        listener.onNewsClicked(position);
     }
 }
 

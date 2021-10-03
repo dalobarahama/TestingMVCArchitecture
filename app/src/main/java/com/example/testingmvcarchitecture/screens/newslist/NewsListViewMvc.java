@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface NewsListViewMvc extends ObservableViewMvc<NewsListViewMvc.Listener> {
     public interface Listener {
-        void onNewsClicked(NewsEntity newsEntity);
+        void onNewsClicked(String position);
     }
 
     void bindNews(List<NewsEntity> newsEntities);

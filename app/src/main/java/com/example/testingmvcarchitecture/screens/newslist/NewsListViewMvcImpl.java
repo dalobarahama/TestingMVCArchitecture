@@ -34,9 +34,9 @@ public class NewsListViewMvcImpl extends BaseObservableViewMvc<NewsListViewMvc.L
     }
 
     @Override
-    public void onNewsClicked(NewsEntity newsEntity) {
+    public void onNewsClicked(String position) {
         for (Listener listener : getListeners()) {
-            listener.onNewsClicked(newsEntity);
+            listener.onNewsClicked(position);
         }
     }
 }

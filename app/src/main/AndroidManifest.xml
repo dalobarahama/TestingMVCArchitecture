@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TestingMVCArchitecture">
         <activity
+            android:name=".screens.newsdetails.NewsDetailsActivity"
+            android:exported="true" />
+        <activity
             android:name=".screens.newslist.NewsListActivity"
             android:exported="true">
             <intent-filter>
