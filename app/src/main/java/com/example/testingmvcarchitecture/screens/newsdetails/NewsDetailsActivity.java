@@ -5,9 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.testingmvcarchitecture.network.FetchNewsDetailsUseCase;
-import com.example.testingmvcarchitecture.network.entities.NewsEntity;
-import com.example.testingmvcarchitecture.screens.common.BaseActivity;
+import com.example.testingmvcarchitecture.news.FetchNewsDetailsUseCase;
+import com.example.testingmvcarchitecture.news.NewsEntity;
+import com.example.testingmvcarchitecture.screens.common.controllers.BaseActivity;
 
 public class NewsDetailsActivity extends BaseActivity implements FetchNewsDetailsUseCase.Listener {
 

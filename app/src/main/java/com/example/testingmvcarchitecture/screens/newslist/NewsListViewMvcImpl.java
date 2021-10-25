@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.testingmvcarchitecture.R;
-import com.example.testingmvcarchitecture.network.entities.NewsEntity;
-import com.example.testingmvcarchitecture.screens.common.BaseObservableViewMvc;
+import com.example.testingmvcarchitecture.news.NewsEntity;
+import com.example.testingmvcarchitecture.screens.common.views.BaseObservableViewMvc;
 import com.example.testingmvcarchitecture.screens.common.ViewMvcFactory;
 
 import java.util.List;

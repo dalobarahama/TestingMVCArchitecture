@@ -1,7 +1,8 @@
-package com.example.testingmvcarchitecture.network;
+package com.example.testingmvcarchitecture.news;
 
 import com.example.testingmvcarchitecture.common.BaseObservable;
-import com.example.testingmvcarchitecture.network.entities.NewsEntity;
+import com.example.testingmvcarchitecture.networking.ApiService;
+import com.example.testingmvcarchitecture.networking.news.NewsSchema;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -23,9 +24,9 @@ public class FetchNewsDetailsUseCase extends BaseObservable<FetchNewsDetailsUseC
     }
 
     public void fetchNewsDetailsAndNotify(int newsPosition) {
-        apiService.getIndonesiaNewsList().enqueue(new Callback<NewsResponse>() {
+        apiService.getIndonesiaNewsList().enqueue(new Callback<NewsSchema>() {
             @Override
-            public void onResponse(Call<NewsResponse> call, Response<NewsResponse> response) {
+            public void onResponse(Call<NewsSchema> call, Response<NewsSchema> response) {
                 if (response.isSuccessful()) {
                     notifySuccess(response.body().getNewsEntities().get(newsPosition));
                 } else {
@@ -34,7 +35,7 @@ public class FetchNewsDetailsUseCase extends BaseObservable<FetchNewsDetailsUseC
             }
 
             @Override
-            public void onFailure(Call<NewsResponse> call, Throwable t) {
+            public void onFailure(Call<NewsSchema> call, Throwable t) {
                 notifyFailure();
             }
         });

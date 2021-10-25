@@ -1,4 +1,4 @@
-package com.example.testingmvcarchitecture.screens.common;
+package com.example.testingmvcarchitecture.screens.common.views;
 
 public interface ObservableViewMvc<ListenerType> extends ViewMvc {
 

@@ -3,8 +3,8 @@ package com.example.testingmvcarchitecture.common.dependencyinjection;
 import android.app.Activity;
 import android.view.LayoutInflater;
 
-import com.example.testingmvcarchitecture.network.ApiService;
-import com.example.testingmvcarchitecture.network.FetchNewsDetailsUseCase;
+import com.example.testingmvcarchitecture.networking.ApiService;
+import com.example.testingmvcarchitecture.news.FetchNewsDetailsUseCase;
 import com.example.testingmvcarchitecture.screens.common.ViewMvcFactory;
 
 public class ControllerCompositionRoot {

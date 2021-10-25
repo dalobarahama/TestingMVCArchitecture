@@ -7,8 +7,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.testingmvcarchitecture.R;
-import com.example.testingmvcarchitecture.network.entities.NewsEntity;
-import com.example.testingmvcarchitecture.screens.common.BaseViewMvc;
+import com.example.testingmvcarchitecture.news.NewsEntity;
+import com.example.testingmvcarchitecture.screens.common.views.BaseViewMvc;
 
 public class NewsDetailsViewMvcImpl extends BaseViewMvc implements NewsDetailsViewMvc {
 

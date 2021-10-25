@@ -1,4 +1,4 @@
-package com.example.testingmvcarchitecture.screens.common;
+package com.example.testingmvcarchitecture.screens.common.views;
 
 import android.content.Context;
 import android.view.View;

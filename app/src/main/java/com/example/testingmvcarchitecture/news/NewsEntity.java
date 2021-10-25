@@ -1,4 +1,4 @@
-package com.example.testingmvcarchitecture.network.entities;
+package com.example.testingmvcarchitecture.news;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -7,8 +7,8 @@ import androidx.annotation.Nullable;
 
 import com.example.testingmvcarchitecture.screens.newsdetails.NewsDetailsViewMvc;
 import com.example.testingmvcarchitecture.screens.newsdetails.NewsDetailsViewMvcImpl;
-import com.example.testingmvcarchitecture.screens.newslist.NewsListItemViewMvc;
-import com.example.testingmvcarchitecture.screens.newslist.NewsListItemViewMvcImpl;
+import com.example.testingmvcarchitecture.screens.newslist.newslistitem.NewsListItemViewMvc;
+import com.example.testingmvcarchitecture.screens.newslist.newslistitem.NewsListItemViewMvcImpl;
 import com.example.testingmvcarchitecture.screens.newslist.NewsListViewMvc;
 import com.example.testingmvcarchitecture.screens.newslist.NewsListViewMvcImpl;
 

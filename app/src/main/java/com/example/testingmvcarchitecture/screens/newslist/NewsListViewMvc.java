@@ -1,7 +1,7 @@
 package com.example.testingmvcarchitecture.screens.newslist;
 
-import com.example.testingmvcarchitecture.screens.common.ObservableViewMvc;
-import com.example.testingmvcarchitecture.network.entities.NewsEntity;
+import com.example.testingmvcarchitecture.screens.common.views.ObservableViewMvc;
+import com.example.testingmvcarchitecture.news.NewsEntity;
 
 import java.util.List;
 

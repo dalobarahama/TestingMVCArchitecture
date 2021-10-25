@@ -1,7 +1,7 @@
 package com.example.testingmvcarchitecture.common.dependencyinjection;
 
 import com.example.testingmvcarchitecture.common.Constants;
-import com.example.testingmvcarchitecture.network.ApiService;
+import com.example.testingmvcarchitecture.networking.ApiService;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

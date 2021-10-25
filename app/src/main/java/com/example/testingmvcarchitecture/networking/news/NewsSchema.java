@@ -1,11 +1,11 @@
-package com.example.testingmvcarchitecture.network;
+package com.example.testingmvcarchitecture.networking.news;
 
-import com.example.testingmvcarchitecture.network.entities.NewsEntity;
+import com.example.testingmvcarchitecture.news.NewsEntity;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class NewsResponse {
+public class NewsSchema {
 
     @SerializedName("status")
     private String status;
@@ -16,7 +16,7 @@ public class NewsResponse {
     @SerializedName("articles")
     private List<NewsEntity> newsEntities;
 
-    public NewsResponse(String status, String totalResults, List<NewsEntity> newsEntities) {
+    public NewsSchema(String status, String totalResults, List<NewsEntity> newsEntities) {
         this.status = status;
         this.totalResults = totalResults;
         this.newsEntities = newsEntities;

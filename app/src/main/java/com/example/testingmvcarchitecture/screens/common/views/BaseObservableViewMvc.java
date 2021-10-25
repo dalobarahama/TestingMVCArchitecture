@@ -1,4 +1,4 @@
-package com.example.testingmvcarchitecture.screens.common;
+package com.example.testingmvcarchitecture.screens.common.views;
 
 import java.util.Collections;
 import java.util.HashSet;

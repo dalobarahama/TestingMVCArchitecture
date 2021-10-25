@@ -5,8 +5,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.testingmvcarchitecture.network.entities.NewsEntity;
+import com.example.testingmvcarchitecture.news.NewsEntity;
 import com.example.testingmvcarchitecture.screens.common.ViewMvcFactory;
+import com.example.testingmvcarchitecture.screens.newslist.newslistitem.NewsListItemViewMvc;
 
 import java.util.ArrayList;
 import java.util.List;

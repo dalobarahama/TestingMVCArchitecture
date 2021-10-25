@@ -1,12 +1,12 @@
-package com.example.testingmvcarchitecture.screens.newslist;
+package com.example.testingmvcarchitecture.screens.newslist.newslistitem;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.testingmvcarchitecture.R;
-import com.example.testingmvcarchitecture.network.entities.NewsEntity;
-import com.example.testingmvcarchitecture.screens.common.BaseObservableViewMvc;
+import com.example.testingmvcarchitecture.news.NewsEntity;
+import com.example.testingmvcarchitecture.screens.common.views.BaseObservableViewMvc;
 
 public class NewsListItemViewMvcImpl extends BaseObservableViewMvc<NewsListItemViewMvc.Listener> implements NewsListItemViewMvc {
 

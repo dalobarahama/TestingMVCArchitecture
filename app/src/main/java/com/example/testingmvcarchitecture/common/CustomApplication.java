@@ -1,4 +1,4 @@
-package com.example.testingmvcarchitecture;
+package com.example.testingmvcarchitecture.common;
 
 import android.app.Application;
 
